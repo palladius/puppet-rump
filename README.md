@@ -1,16 +1,25 @@
-rump-test manifests
-===================
+puppet-rump
+===========
 
-modules/ <= Puppet modules
-manifests/ <= Puppet nodes
-vendor/ <= frozen Puppet + Facter
+This was done in seconds with `rump gem` (amazing).
 
---------------
+What do you have to do to use this? I suggest you to wait a bit as I clean it 
+up a bit (for the moment its just for my use).
+
+But roughly:
+
+    sudo gem install rump
+    rump clone git://github.com/palladius/puppet-rump.git #ReadOnly (you)
+    #rump clone git@github.com:palladius/puppet-rump.git # ssh r/w (me)
+    
+With `rump freeze` you dont even need to have puppet installed, cool!!!
+
 Riccardo stuff
 --------------
 
- rump go   --modulepath /home/riccardo/git/rump-test/modules/ricpuppet/
+TODO
 
+    Cleanup global variables in `site.pp`
 
 Running Puppet with Rump
 ------------------------
