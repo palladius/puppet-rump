@@ -5,6 +5,13 @@ modules/ <= Puppet modules
 manifests/ <= Puppet nodes
 vendor/ <= frozen Puppet + Facter
 
+--------------
+Riccardo stuff
+--------------
+
+ rump go   --modulepath /home/riccardo/git/rump-test/modules/ricpuppet/
+
+
 Running Puppet with Rump
 ------------------------
 
