@@ -27,16 +27,11 @@ node production_node inherits riccardonode { }
 node development_node inherits riccardonode {
   include etckeeper
   include hamachi
-  #if (defined('description')) {
-  #  class {'vanilla':
-  #    machine_description => "[riccardonode] $description"
-  #  }
-  #}
 }
 
-#class development_machine {
+class development_machine {
   #class { 'puppet':
   #  development_machine => true
   #}
-#}
+}
 
