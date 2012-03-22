@@ -8,7 +8,7 @@ up a bit (for the moment its just for my use).
 
 But roughly:
 
-* Initialization
+*Initialization*
 
     sudo gem install rump
     rump clone git://github.com/palladius/puppet-rump.git # ReadOnly - YOU
@@ -17,7 +17,8 @@ But roughly:
     git submodule update # loading the submodule
     #rump freeze # if you want a puppet-code-less client
 
-* Download and execute cycle
+*Download and execute cycle*
+
     git pull origin master                       # pulls the main repo
     git submodule foreach git pull origin master # updates the submodules
     rump go --noop                    # remove --noop when sure it works
