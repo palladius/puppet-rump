@@ -4,6 +4,12 @@
 $servername  = "puppetmaster.$domain"
 $cluster_ver = '0.9.1'
 
+import 'domain__cloud_internal.pp'
+import 'domain__hetzner_palladius_eu.pp'
+
+
+# Common Stuff
+
 node riccardonode {
   #include puppetlabs-repo
 
@@ -28,34 +34,9 @@ node development_node inherits riccardonode {
   #}
 }
 
-class domain_cloud_internal {
-  # Machines I have at work
-}
-
-#class "domain_hetzner_palladius_eu"
-#  # Machines I have in Hetzner
-#}
-
 #class development_machine {
   #class { 'puppet':
   #  development_machine => true
   #}
 #}
 
-# Home
-
-# Work
-node 'vissani.cloud.internal' inherits production_node  {
-  $description = 'My beefy workstation at werk with 8 beefy processors :)'
-  class {'vanilla': machine_description => $description }
-  #include 'vanilla'
-}
-node 'petomarmitta' inherits development_node {
-  #$development_machine = 'yes'
-  $description = 'Expendable VM on Vissani built on Virtualbox'
-  class {'vanilla': machine_description => $description }
-}
-node 'cloudia.cloud.internal' inherits development_node  {
-  $description = 'My VM with hamachi and personal stuff at werk'
-  class {'vanilla': machine_description => $description }
-}
