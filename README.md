@@ -9,9 +9,11 @@ up a bit (for the moment its just for my use).
 But roughly:
 
     sudo gem install rump
-    rump clone git://github.com/palladius/puppet-rump.git #ReadOnly (you)
-    #rump clone git@github.com:palladius/puppet-rump.git # ssh r/w (me)
-    
+    rump clone git://github.com/palladius/puppet-rump.git # ReadOnly - YOU
+    #rump clone git@github.com:palladius/puppet-rump.git  # ssh r/w  - ME
+    #rump freeze # if you want a puppet-code-less client
+    rump go
+
 With `rump freeze` you dont even need to have puppet installed, cool!!!
 
 Riccardo stuff
