@@ -5,6 +5,7 @@ $servername  = "puppetmaster.$domain"
 $cluster_ver = '0.9.1'
 
 import 'domain__cloud_internal.pp'
+import 'domain__blackrock_dundrum_palladius_eu'
 import 'domain__hetzner_palladius_eu.pp'
 
 

@@ -12,6 +12,7 @@ But roughly:
 
     sudo gem install rump
     rump clone git://github.com/palladius/puppet-rump.git # ReadOnly - YOU
+    cd puppet-rump
     #rump clone git@github.com:palladius/puppet-rump.git  # ssh r/w  - ME
     git submodule init
     git submodule update # loading the submodule
