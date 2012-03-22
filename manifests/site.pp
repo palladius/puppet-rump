@@ -16,9 +16,7 @@ node riccardonode {
   }
 }
 
-node production_node inherits riccardonode {
-  
-}
+node production_node inherits riccardonode { }
 
 node development_node inherits riccardonode {
   include etckeeper
@@ -38,11 +36,11 @@ class domain_cloud_internal {
 #  # Machines I have in Hetzner
 #}
 
-class development_machines {
+#class development_machine {
   #class { 'puppet':
   #  development_machine => true
   #}
-}
+#}
 
 # Home
 
@@ -53,7 +51,7 @@ node 'vissani.cloud.internal' inherits production_node  {
   #include 'vanilla'
 }
 node 'petomarmitta' inherits development_node {
-  $development_machine = 'yes'
+  #$development_machine = 'yes'
   $description = 'Expendable VM on Vissani built on Virtualbox'
   class {'vanilla': machine_description => $description }
 }
