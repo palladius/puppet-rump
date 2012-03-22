@@ -11,6 +11,8 @@ But roughly:
     sudo gem install rump
     rump clone git://github.com/palladius/puppet-rump.git # ReadOnly - YOU
     #rump clone git@github.com:palladius/puppet-rump.git  # ssh r/w  - ME
+    git submodule init
+    git submodule update # loading the submodule
     #rump freeze # if you want a puppet-code-less client
     rump go
 
