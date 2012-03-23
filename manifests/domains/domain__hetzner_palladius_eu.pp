@@ -24,8 +24,8 @@ node 'ricvm18' {
   include staas-zookeeper
 }
 
-node /.*/ {
-  # All hosts
-  include sauce
-  include etckeeper
-}
+#node /ricvm.*/ {
+#  # All hosts
+#  include sauce
+#  include etckeeper
+#}
