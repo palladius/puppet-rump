@@ -8,7 +8,7 @@ class domain_hetzner_palladius_eu {
 }
 
 
-host 'ricvm17' {
+node 'ricvm17' {
   # this is the puppet master
   include puppet
   # include tomato
@@ -19,12 +19,12 @@ host 'ricvm17' {
 }
 
 
-host 'ricvm18' {
+node 'ricvm18' {
   # hypothetical
   include staas-zookeeper
 }
 
-host /.*/ {
+node /.*/ {
   # All hosts
   include sauce
   include etckeeper
