@@ -21,7 +21,9 @@ node riccardonode {
   }
 }
 
-node production_node inherits riccardonode { }
+node production_node inherits riccardonode { 
+  include etckeeper
+}
 
 node development_node inherits riccardonode {
   include etckeeper
