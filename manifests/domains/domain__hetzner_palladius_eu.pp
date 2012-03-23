@@ -1,7 +1,9 @@
-# Docs for this class
-$cluster_description_hetzner = 'Hetzner cluster this will clash with other scopes? Boh!'
+# Docs for my Hetzner machines
 #
-class domain_hetzner_palladius_eu {
+class domain__hetzner_palladius_eu {
+  $cluster_description_hetzner = 'Hetzner cluster this will \
+    clash with other scopes? Boh!'
+  
   # Machines I have in Hetzner
   include sauce
   include hamachi
