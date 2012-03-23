@@ -2,13 +2,9 @@
 # riccardo host
 
 $servername  = "puppetmaster.$domain"
-$cluster_ver = '0.9.1'
+$cluster_ver = '0.9.2'
 
-# domain-dependant nodes
-#import 'domains/domain__cloud_internal.pp'
-#import 'domains/domain__blackrock_dundrum_palladius_eu'
-#import 'domains/domain__hetzner_palladius_eu.pp'
-#import 'domains/domain__dell_palladius_eu.pp'
+# domain-dependant nodes:
 import 'domains/domain__*.pp'
 
 # Common Stuff
