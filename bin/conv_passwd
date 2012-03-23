@@ -1,0 +1,37 @@
+#!/usr/bin/ruby
+#
+# This simple program reads in a passwd file and converts it to a
+# virt_all_users file
+
+if ARGV[0] == nil
+    puts "Must specify a passwd file to use."
+    puts "Generally, you'll want to pipe the output to the virt_all_users.pp manifest"
+    exit
+end
+
+pwdFile = ARGV[0]
+
+puts <<HEADER
+# Fully sponsored accounts of interest as virtual resources
+
+class user::virtual {
+HEADER
+
+File.open(pwdFile) do |file|
+    while line = file.gets
+        sunetid, tmp, uid, gid, name, homedir, shell = line.split(/\:/)
+        puts "    @user { \"" + sunetid + "\":"
+        puts "        ensure  => \"present\","
+        puts "        uid     => \"" + uid + "\","
+        puts "        gid     => \"" + gid + "\","
+        puts "        comment => \"" + name + "\","
+        puts "        home    => \"" + homedir + "\","
+        puts "        shell   => \"" + shell.chomp + "\","
+        puts "    }"
+        puts ""
+    end
+end
+
+puts <<FOOTER
+}
+FOOTER
