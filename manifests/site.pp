@@ -17,7 +17,8 @@ node riccardonode {
   #  e.g. "example.com" => "domain__example_com"
   $domain_class=regsubst($domain, '\.', '_', 'G')
   if defined("domain__$domain_class") {
-    class{"domain__$domain_class": }
+    notify{"TODO Include class: 'domain__$domain_class'":}
+    #class{"domain__$domain_class": }
   }
 }
 

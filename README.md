@@ -20,6 +20,6 @@ But roughly:
 
     git pull origin master                           # pulls the main repo
     git submodule foreach git pull origin master     # pulls the submodules
-    rump go --noop                                   # remove --noop when sure it works
+    rump go -vd --noop                               # remove --noop when sure it works
 
 With `rump freeze` you dont even need to have puppet installed, cool!!!
