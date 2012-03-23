@@ -22,6 +22,10 @@ node 'vissani.cloud.internal' inherits production_node  {
   #  machine_description => $description,
   #  cluster_description => $cluster_description_cloud_internal,
   #}
+  sauce::parsley {'vissani-node':
+    content => "I love Vissani. He was a cook and my dad methim in person.
+  This is my host description: $description_vissani"
+  }
 }
 node 'petomarmitta' inherits development_node {
   #$development_machine = 'yes'
