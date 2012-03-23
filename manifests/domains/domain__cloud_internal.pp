@@ -1,6 +1,6 @@
 
-$cluster_description = "[Cluster v$cluster_ver] This is Dell cloud.internal 
-domain, regulated by Denise."
+$cluster_description_cloud_internal = "[Cluster v$cluster_ver]
+This is Dell cloud.internal domain, regulated by Denise."
 
 # file: domain__cloud_internal.pp
 class domain__cloud_internal {
@@ -11,16 +11,16 @@ class domain__cloud_internal {
 # Work hosts
 
 node 'cloudia.cloud.internal' inherits development_node  {
-  $description = 'My VM with hamachi and personal stuff at werk'
+  $description_cloudia = 'My VM with hamachi and personal stuff at werk'
   #class {'sauce': machine_description => $description1 }
 }
 
 node 'vissani.cloud.internal' inherits production_node  {
-  $description = 'My beefy workstation at werk with 8 beefy processors :)'
+  $description_vissani = 'My beefy workstation at werk with 8 beefy processors :)'
   #class {'sauce': machine_description => $description2 }
   class { 'sauce::tomato':
     machine_description => $description,
-    cluster_description => $cluster_description,
+    cluster_description => $cluster_description_cloud_internal,
   }
 }
 node 'petomarmitta' inherits development_node {

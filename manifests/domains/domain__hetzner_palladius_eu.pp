@@ -1,5 +1,5 @@
 # Docs for this class
-$cluster_description = 'Hetzner cluster this will clash with other scopes? Boh!'
+$cluster_description_hetzner = 'Hetzner cluster this will clash with other scopes? Boh!'
 #
 class domain_hetzner_palladius_eu {
   # Machines I have in Hetzner
@@ -14,7 +14,7 @@ node 'ricvm17' {
   # include tomato
   #class { 'sauce::tomato':
   #  machine_description => 'this is the puppet master',
-  #  cluster_description => $cluster_description,
+  #  cluster_description => $cluster_description_hetzner,
   #}
 }
 
