@@ -11,7 +11,7 @@ But roughly:
 *Initialization*
 
     sudo apt-get install rubygems                              # or whichever suits you to have GEMS available
-    sudo gem install rump
+    sudo gem install rump puppet                               # dont use debian puppet, might be obsolete!
     rump clone git://github.com/palladius/puppet-rump.git      # ReadOnly - YOU
     cd puppet-rump
     #rump freeze                                               # if you want a puppet-code-less client
