@@ -22,18 +22,29 @@ node riccardonode {
   }
 }
 
-node production_node inherits riccardonode { 
+node linux_node {
   include etckeeper
 }
 
+node production_node inherits riccardonode { 
+  #include etckeeper
+}
+
+node development_mac_node inherits riccardonode {
+  #include etckeeper
+  #include hamachi
+  include sauce
+  sauce::parsley { 'development_mac_node':
+    content => "This is a Mac Node: $sp_os_version"
+  }
+}
+
 node development_node inherits riccardonode {
-  include etckeeper
+  #include etckeeper
   include hamachi
 }
 
 class development_machine {
-  #class { 'puppet':
-  #  development_machine => true
-  #}
+
 }
 

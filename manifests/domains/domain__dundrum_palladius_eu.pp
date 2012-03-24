@@ -22,7 +22,8 @@ node 'blackrock' inherits development_node {
 }
 
 # Unique ID: W883711DYJZ
-node 'hansel' inherits development_node {
+#node 'hansel' inherits development_node {
+node 'hansel' inherits development_mac_node {
   #$development_machine = 'yes'
   $description = 'My Mac super-client'
   sauce::parsley { 'todo-hansel':
