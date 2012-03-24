@@ -7,6 +7,7 @@ class domain__dundrum_palladius_eu {
   # Machines I have at work
   include sauce
   hamachi::network{'puppet-dundrum': pass => 'CH4NG3M3!' }
+  sauce::parsley { 'cluster-version': content => "for $domain: cluster_ver=$cluster_ver" }
 }
 
 #############################################################################
