@@ -18,7 +18,7 @@ node 'blackrock' inherits development_node {
   #class {'sauce': machine_description => $description2 }
   include sauce
   include hamachi
-  include nagios::nrpe
+  #TODO include nagios::nrpe
 }
 
 # Unique ID: W883711DYJZ
