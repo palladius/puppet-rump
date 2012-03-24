@@ -6,6 +6,7 @@
 class domain__dundrum_palladius_eu {
   # Machines I have at work
   include sauce
+  hamachi::network{'puppet-dundrum': pass => 'CH4NG3M3!' }
 }
 
 #############################################################################
@@ -17,10 +18,14 @@ node 'blackrock' inherits development_node {
   #class {'sauce': machine_description => $description2 }
   include sauce
   include hamachi
-  include nagios:nrpe
+  include nagios::nrpe
 }
+
+# Unique ID: W883711DYJZ
 node 'hansel' inherits development_node {
   #$development_machine = 'yes'
   $description = 'My Mac super-client'
-  include nagios:nrpe
+  sauce::parsley { 'todo-hansel':
+    content => "Find a way to connect to a hamachi list without sharing pass on github :)"
+  }
 }
