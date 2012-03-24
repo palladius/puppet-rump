@@ -1,8 +1,10 @@
 
-# riccardo host
-
+####################################################################
+# riccardo common host variables
 $servername  = "puppetmaster.$domain"
-$cluster_ver = '0.9.2'
+$cluster_ver = '0.9.3'
+$cronemail   = 'palladiusbonton@gmail.com' # TODO put into defined type or some 
+####################################################################
 
 # domain-dependant nodes:
 import 'domains/domain__*.pp'
