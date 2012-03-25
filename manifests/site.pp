@@ -2,7 +2,9 @@
 ####################################################################
 # riccardo common host variables
 $servername  = "puppetmaster.$domain"
-$cluster_ver = '0.9.4'
+$cluster_ver = '0.9.5'
+$power_user  = 'riccardo'
+$cron_name   = 'Riccardo Carlesso'
 $cronemail   = 'palladiusbonton@gmail.com' # TODO put into defined type or some 
 ####################################################################
 
