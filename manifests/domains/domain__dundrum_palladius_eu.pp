@@ -22,6 +22,14 @@ node 'blackrock' inherits development_node {
   #TODO include nagios::nrpe
 }
 
+node 'naucrate' inherits development_node {
+  $description = 'My Debian Squeezy which is f**ed up. I have to create a new Ubuntu machine I guess :)'
+  #class {'sauce': machine_description => $description2 }
+  include sauce
+  include hamachi
+  #TODO include nagios::nrpe
+}
+
 # Unique ID: W883711DYJZ
 #node 'hansel' inherits development_node {
 node 'hansel' inherits development_mac_node {
