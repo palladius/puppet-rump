@@ -3,7 +3,7 @@
 # riccardo common host variables
 $servername  = "puppetmaster.$domain"
 $cluster_ver = '0.9.5'
-$power_user  = 'riccardo'
+$cluster_poweruser_name  = 'riccardo'
 $cron_name   = 'Riccardo Carlesso'
 $cronemail   = 'palladiusbonton@gmail.com' # TODO put into defined type or some 
 ####################################################################
@@ -21,8 +21,8 @@ node riccardonode {
   #  e.g. "example.com" => "domain__example_com"
   $domain_class=regsubst($domain, '\.', '_', 'G')
   if defined("domain__$domain_class") {
-    notify{"TODO Include class: 'domain__$domain_class'":}
-    #class{"domain__$domain_class": }
+    #notify{"TODO Include class: 'domain__$domain_class'":}
+    class{"domain__$domain_class": }
   }
 }
 
