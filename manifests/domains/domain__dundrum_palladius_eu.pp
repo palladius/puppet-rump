@@ -2,12 +2,16 @@
 # Machine on domain: dundrum.palladius.eu (my house in Dundrum, Dublin 14)
 #############################################################################
 
+$cluster_description = 'This is my cluster in Dundrum, Dublin 14'
+
 # Common stuff
 class domain__dundrum_palladius_eu {
   # Machines I have at work
   include sauce
   hamachi::network{'puppet-dundrum': pass => 'CH4NG3M3!' }
-  sauce::parsley { 'cluster-version': content => "for $domain: cluster_ver=$cluster_ver" }
+  sauce::parsley { 'cluster-version': 
+    content => "for $domain: cluster_ver=$cluster_ver (defined )" 
+  }
 }
 
 #############################################################################
