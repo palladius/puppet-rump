@@ -3,6 +3,7 @@
 #############################################################################
 
 $cluster_description = 'This is my cluster in Dundrum, Dublin 14'
+$nagios_servers = ['1.2.3.4','5.6.7.8'] # for test
 
 # Common stuff
 class domain__dundrum_palladius_eu {
@@ -19,15 +20,15 @@ class domain__dundrum_palladius_eu {
 #############################################################################
 
 node 'blackrock' inherits development_node {
-  $description = 'My Dell superslow workstation for watching movies'
+  $description_blackrock = 'My Dell superslow workstation for watching movies'
   #class {'sauce': machine_description => $description2 }
   include sauce
   include hamachi
-  #TODO include nagios::nrpe
+  include nagios::nrpe
 }
 
 node 'naucrate' inherits development_node {
-  $description = 'My Debian Squeezy which is f**ed up. I have to create a new Ubuntu machine I guess :)'
+  $description_naucrate = 'My Debian Squeezy which is f**ed up. I have to create a new Ubuntu machine I guess :)'
   #class {'sauce': machine_description => $description2 }
   include sauce
   include hamachi
@@ -37,9 +38,11 @@ node 'naucrate' inherits development_node {
 # Unique ID: W883711DYJZ
 #node 'hansel' inherits development_node {
 node 'hansel' inherits development_mac_node {
-  $description = 'My Mac super-client'
+  $description_hansel = 'My Mac super-client'
   sauce::parsley { 'todo-hansel':
-    content => "Find a way to connect to a hamachi list without sharing pass on github :)"
+    content => "Find a way to connect to a hamachi list without sharing pass on github :)
+     Mydesc: $description_hansel
+    "
   }
   manazza::add_user { rrunner:  email => "road.runner@acme.com", uid => 505 }
 }

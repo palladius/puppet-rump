@@ -1,9 +1,10 @@
 
 ####################################################################
 # riccardo common host variables
-$servername  = "puppetmaster.$domain"
-$cluster_ver = '0.10.1'
+$servername  = "puppetmaster.$domain" # generic puppetmaster, TODO dns.
+$cluster_ver = '0.10.2'
 $cluster_poweruser_name  = 'riccardo'
+# Administrator (TODO change varnmae)
 $cron_name   = 'Riccardo Carlesso'
 $cronemail   = 'palladiusbonton@gmail.com' # TODO put into defined type or some 
 ####################################################################
@@ -17,8 +18,8 @@ node riccardonode {
   #include puppetlabs-repo
 
   # include a class named as per the domain (with'.' replaced with '_'),
-  # if it exists:
-  #  e.g. "example.com" => "domain__example_com"
+  # with prepended "domain_".
+  #  e.g. "sobenme.example.com" => "domain__sobenme_example_com"
   $domain_class=regsubst($domain, '\.', '_', 'G')
   if defined("domain__$domain_class") {
     #notify{"TODO Include class: 'domain__$domain_class'":}
@@ -45,10 +46,6 @@ node development_mac_node inherits riccardonode {
 
 node development_node inherits riccardonode {
   #include etckeeper
+  include sauce
   include hamachi
 }
-
-class development_machine {
-
-}
-
