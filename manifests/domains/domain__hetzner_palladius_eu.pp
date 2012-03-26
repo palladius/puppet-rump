@@ -12,10 +12,8 @@ class domain__hetzner_palladius_eu {
 
 node 'ricvm17' {
   # this is the puppet master
+  #include puppet # broken
   include sauce
-  #include puppet #broken:
-# Duplicate declaration: Package[rubygems] is already declared in file /root/git/puppet-rump/modules/puppet/manifests/init.pp at line 23; cannot redeclare at /root/git/puppet-rump/modules/sauce/manifests/init.pp:124 on node ricvm17.hetzner.palladius.eu
-  # include tomato
   #class { 'sauce::tomato':
   #  machine_description => 'this is the puppet master',
   #  cluster_description => $cluster_description_hetzner,
