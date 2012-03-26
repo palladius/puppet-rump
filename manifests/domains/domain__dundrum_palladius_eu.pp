@@ -37,4 +37,11 @@ node 'hansel' inherits development_mac_node {
   sauce::parsley { 'todo-hansel':
     content => "Find a way to connect to a hamachi list without sharing pass on github :)"
   }
+  manazza::add_user { rrunner:  email => "road.runner@acme.com", uid => 505 }
+}
+
+node 'vbox-hanselmo' inherits development_node {
+  $description_hanselmo = 'Hansel VM with Ubuntu 11.10 to test puppet'
+  sauce::parsley { 'todo-hanselmo':   content => "Look: $description_hanselmo " }
+  manazza::add_user { rrunner:  email => 'road.runner@acme.com', uid => 5005 }
 }
