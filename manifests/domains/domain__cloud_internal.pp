@@ -17,7 +17,7 @@ node 'cloudia.cloud.internal' inherits development_node  {
 
 node 'vissani.cloud.internal' inherits production_node  {
   $description_vissani = 'My beefy workstation at werk with 8 beefy processors :)'
-  #class {'sauce': machine_description => $description2 }
+  #class {'sauce': machine_description => $description_vissani }
   #class { 'sauce::tomato':
   #  machine_description => $description,
   #  cluster_description => $cluster_description_cloud_internal,
