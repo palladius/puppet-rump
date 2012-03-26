@@ -8,18 +8,19 @@ up a bit (for the moment its just for my use).
 
 But roughly:
 
-*Initialization*
+INSTALL
+-------
 
-    sudo apt-get install rubygems git                          # or whichever suits you to have GEMS available
-    sudo gem install rump puppet                               # dont use debian puppet, might be obsolete!
-    rump clone git://github.com/palladius/puppet-rump.git      # ReadOnly - YOU
-    cd puppet-rump
-    #rump freeze                                               # if you want a puppet-code-less client
+ sudo apt-get install rubygems git                          # or whichever suits you to have GEMS available
+ sudo gem install rump puppet                               # dont use debian puppet, might be obsolete!
+ rump clone git://github.com/palladius/puppet-rump          # Get the repo (and sub-repo)
+ cd puppet-rump
+ #rump freeze                                               # if you want a puppet-code-less client
 
-*Download and execute cycle*
+Download and execute cycle
+--------------------------
 
-    git pull origin master                           # pulls the main repo
-    git submodule foreach git pull origin master     # pulls the submodules
-    rump go -vd --noop                               # remove --noop when sure it works
+    git pull origin master && git submodule foreach git pull origin master     # pulls repo then submodules
+    rump go -vd --noop                                                         # remove --noop when sure it works
 
 With `rump freeze` you dont even need to have puppet installed, cool!!!

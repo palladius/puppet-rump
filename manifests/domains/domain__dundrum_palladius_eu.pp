@@ -42,6 +42,6 @@ node 'hansel' inherits development_mac_node {
 
 node 'vbox-hanselmo' inherits development_node {
   $description_hanselmo = 'Hansel VM with Ubuntu 11.10 to test puppet'
-  sauce::parsley { 'todo-hanselmo':   content => "Look: $description_hanselmo " }
+  sauce::parsley { 'todo-hanselmo':   content => "Look: $description_hanselmo" }
   manazza::add_user { rrunner:  email => 'road.runner@acme.com', uid => 5005 }
 }
