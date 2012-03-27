@@ -1,4 +1,4 @@
-
+#$cluster_poweruser_name = 'riccardo-cluster'
 $cluster_description_cloud_internal = "[Cluster v$cluster_ver]
 This is Dell cloud.internal domain, regulated by Denise."
 
@@ -6,6 +6,7 @@ This is Dell cloud.internal domain, regulated by Denise."
 class domain__cloud_internal {
   # Machines I have at work
   include sauce
+  #$cluster_poweruser_name = 'riccardo-ci'
 }
 
 # Work hosts
@@ -17,6 +18,7 @@ node 'cloudia.cloud.internal' inherits development_node  {
 
 node 'vissani.cloud.internal' inherits production_node  {
   $description_vissani = 'My beefy workstation at werk with 8 beefy processors :)'
+  #$cluster_poweruser_name = 'riccardo-vissani'
   #class {'sauce': machine_description => $description_vissani }
   #class { 'sauce::tomato':
   #  machine_description => $description,
