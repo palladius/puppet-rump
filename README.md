@@ -15,6 +15,11 @@ INSTALL
     cd puppet-rump
     #rump freeze                                               # if you want a puppet-code-less client
 
+You might have problems to run `rump` on your system without adding gems bins to the path. For instance on Ubuntu
+you have to do this (crazy innit?!?):
+
+    export PATH=$PATH:/var/lib/gems/1.8/bin/
+
 Download and execute cycle
 --------------------------
 
