@@ -18,7 +18,8 @@ INSTALL
 Download and execute cycle
 --------------------------
 
-    git pull origin master && git submodule foreach git pull origin master     # pulls repo then submodules
-    rump go -vd --noop                                                         # remove --noop when sure it works
+    git pull origin master &&                                  # pulls repo
+    git submodule foreach git pull origin master &&            # pulls its submodules
+    rump go -vd --noop                                         # remove --noop when sure it works
 
 With `rump freeze` you dont even need to have puppet installed, cool!!!
