@@ -28,6 +28,11 @@ you have to do this (crazy innit?!?):
 
     apt-get install libopenssl-ruby
 
+''submodule''. First time I run it sometimes I nede this:
+
+    git submodule init
+    git submodule update
+
 Download and execute cycle
 --------------------------
 
