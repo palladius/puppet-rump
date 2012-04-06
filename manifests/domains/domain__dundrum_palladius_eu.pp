@@ -38,13 +38,23 @@ node 'naucrate' inherits development_node {
 # Unique ID: W883711DYJZ
 #node 'hansel' inherits development_node {
 node 'hansel' inherits development_mac_node {
+  
   $description_hansel = 'My Mac super-client'
   sauce::parsley { 'todo-hansel':
     content => "Find a way to connect to a hamachi list without sharing pass on github :)
      Mydesc: $description_hansel
     "
   }
-  manazza::add_user { rrunner:  email => "road.runner@acme.com", uid => 505 }
+  #manazza::add_user { rrunner:  email => "road.runner@acme.com", uid => 505 }
+  #manazza::add_user { rrunner:  email => "road.runner@acme.com", uid => 505 }
+
+  # does it work on a Mac? Dont think so..
+  logrotate::file { "puppetric-prova.log": 
+    log => "/var/log/riccardo/doesntexist.log",
+    options => [ 'compress', 'weekly', 'rotate 4' ],
+    postrotate => "/bin/echo Puppet notify logrotate on Hansel done | 
+      /Users/riccardo/git/gic-hansel//bin/ricnotify green PuppetRump ok",
+  }
 }
 
 node 'vbox-hanselmo' inherits development_node {

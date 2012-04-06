@@ -4,3 +4,6 @@
 [submodule "externals/puppet-vcsrepo"]
 	path = externals/puppet-vcsrepo
 	url = git://github.com/puppetlabs/puppet-vcsrepo
+[submodule "puppet-iptables"]
+	path = puppet-iptables
+	url = /Users/riccardo/git/rump/externals/puppet-iptables/.git
