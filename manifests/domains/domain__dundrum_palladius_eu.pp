@@ -3,7 +3,7 @@
 #############################################################################
 
 $cluster_description = 'This is my cluster in Dundrum, Dublin 14'
-$nagios_servers = ['1.2.3.4','5.6.7.8'] # for test
+$nagios_servers      = ['1.2.3.4','5.6.7.8'] # for test
 
 # Common stuff
 class domain__dundrum_palladius_eu {
@@ -35,8 +35,6 @@ node 'naucrate' inherits development_node {
   #TODO include nagios::nrpe
 }
 
-# Unique ID: W883711DYJZ
-#node 'hansel' inherits development_node {
 node 'hansel' inherits development_mac_node {
   
   $description_hansel = 'My Mac super-client'
@@ -48,17 +46,19 @@ node 'hansel' inherits development_mac_node {
   #manazza::add_user { rrunner:  email => "road.runner@acme.com", uid => 505 }
   #manazza::add_user { rrunner:  email => "road.runner@acme.com", uid => 505 }
 
-  # does it work on a Mac? Dont think so..
-  logrotate::file { "puppetric-prova.log": 
-    log => "/var/log/riccardo/doesntexist.log",
-    options => [ 'compress', 'weekly', 'rotate 4' ],
-    postrotate => "/bin/echo Puppet notify logrotate on Hansel done | 
-      /Users/riccardo/git/gic-hansel//bin/ricnotify green PuppetRump ok",
-  }
 }
 
 node 'vbox-hanselmo' inherits development_node {
   $description_hanselmo = 'Hansel VM with Ubuntu 11.10 to test puppet'
   sauce::parsley { 'todo-hanselmo':   content => "Look: $description_hanselmo" }
-  manazza::add_user { rrunner:  email => 'road.runner@acme.com', uid => 5005 }
+  ##manazza::add_user { rrunner:  email => 'road.runner@acme.com', uid => 5005 }
+
+  # does it work on a Mac? Dont think so..
+  logrotate::file { "puppetric-prova.log": 
+    log        => "/var/log/riccardo/ok.log",
+    options    => [ 'compress', 'weekly', 'rotate 4' ],
+    postrotate => "/bin/echo Puppet notify logrotate on Hansel done | 
+      /Users/riccardo/git/gic-hansel//bin/ricnotify green PuppetRump ok",
+  }
+
 }
