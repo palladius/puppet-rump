@@ -1,6 +1,8 @@
 puppet-rump
 ===========
 
+[![Build Status](https://secure.travis-ci.org/palladius/rump.png)](http://travis-ci.org/palladius/rump)
+
 This was done in seconds with `rump gem` (amazing).
 
 What do you have to do to use this? I suggest you to wait a bit as I clean it
