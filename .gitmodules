@@ -7,3 +7,6 @@
 [submodule "puppet-iptables"]
 	path = puppet-iptables
 	url = /Users/riccardo/git/rump/externals/puppet-iptables/.git
+[submodule "externals/jamtur1_puppet-irc"]
+	path = externals/jamtur1_puppet-irc
+	url = https://github.com/jamtur01/puppet-irc.git
