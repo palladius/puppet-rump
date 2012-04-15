@@ -22,6 +22,7 @@ class domain__dundrum_palladius_eu {
 node 'blackrock' inherits development_node {
   $description_blackrock = 'My Dell superslow workstation for watching movies'
   #class {'sauce': machine_description => $description2 }
+  hamachi::network{'puppet-dundrum': pass => 'CH4NG3M3!' }
   include sauce
   include hamachi
   include nagios::nrpe
@@ -29,7 +30,8 @@ node 'blackrock' inherits development_node {
 
 node 'naucrate' inherits development_node {
   $description_naucrate = 'My Debian Squeezy which is f**ed up. I have to create a new Ubuntu machine I guess :)'
-  #class {'sauce': machine_description => $description2 }
+  hamachi::network{'puppet-dundrum':  pass => 'CH4NG3M3!' }
+  hamachi::network{'puppet-naucrate': pass => 'ShouldntWork' }
   include sauce
   include hamachi
   #TODO include nagios::nrpe
