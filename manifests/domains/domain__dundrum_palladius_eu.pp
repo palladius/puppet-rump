@@ -29,11 +29,16 @@ node 'blackrock' inherits development_node {
 }
 
 node 'naucrate' inherits development_node {
-  $description_naucrate = 'My Debian Squeezy which is f**ed up. I have to create a new Ubuntu machine I guess :)'
+  $description_naucrate = 'My new Ubuntu machine I bought with Fabio. Its been f**d up but its better since April 15 2012'
   include sauce
   include hamachi
   include dropbox
   include vnc4server
+  vcsrepo { '/tmp/vcstest-git-clone':
+    ensure   => present,
+    provider => git,
+    source   => 'git://github.com/palladius/sakura.git'
+  }
   #TODO include nagios::nrpe
 }
 
