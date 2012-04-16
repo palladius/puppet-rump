@@ -13,6 +13,11 @@ class domain__dundrum_palladius_eu {
   sauce::parsley { 'cluster-version': 
     content => "for $domain: cluster_ver=$cluster_ver (defined )" 
   }
+  vcsrepo { '/root/git-puppet-sakura':
+    ensure   => present,
+    provider => git,
+    source   => 'git://github.com/palladius/sakura.git'
+  }
 }
 
 #############################################################################
