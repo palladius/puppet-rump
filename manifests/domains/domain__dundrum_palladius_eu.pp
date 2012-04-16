@@ -2,8 +2,14 @@
 # Machine on domain: dundrum.palladius.eu (my house in Dundrum, Dublin 14)
 #############################################################################
 
-$cluster_description = 'This is my cluster in Dundrum, Dublin 14'
-$nagios_servers      = ['1.2.3.4','5.6.7.8'] # for test
+$cluster_description = '
+	This is my cluster in Dundrum, Dublin 14. All machines have a router by NTL.
+	Domain: dundrum.palladius.eu
+	IPs: 192.168.1/24
+'
+$network_cidr        = '192.168.1/24'
+$expected_gw         = '192.168.1.1'
+$nagios_servers      = ['192.168.1.252','192.168.1.250'] # blackrock, naucrate
 
 # Common stuff to
 # Machines I have at home
@@ -14,12 +20,12 @@ class domain__dundrum_palladius_eu {
     content => "for $domain: cluster_ver=$cluster_ver (defined )" 
   }
   # post install add inkject to .bashrc :)
-  vcsrepo { '/root/git-autopuppet-sakura':
+  vcsrepo { '/root/git/autopuppet-sakura':
     ensure   => present,
     provider => git,
     source   => 'git://github.com/palladius/sakura.git'
   }
-  vcsrepo { '/root/git-autopuppet-rump':
+  vcsrepo { '/root/git/autopuppet-rump':
     ensure   => present,
     provider => git,
     source   => 'git://github.com/palladius/puppet-rump.git'
