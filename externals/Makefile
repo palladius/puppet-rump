@@ -8,7 +8,7 @@ all: compile
 
 compile $(SUBDIRS):
 	@echo externals: Recursively make dir external sons: '$@'..
-	for dir in $(player) $(SUBDIRS);   \
+	@for dir in $(player) $(SUBDIRS);   \
 	do                                 \
 	  $(MAKE) --directory=$$dir;       \
 	done
