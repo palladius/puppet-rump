@@ -5,18 +5,24 @@
 $cluster_description = 'This is my cluster in Dundrum, Dublin 14'
 $nagios_servers      = ['1.2.3.4','5.6.7.8'] # for test
 
-# Common stuff
+# Common stuff to
+# Machines I have at home
 class domain__dundrum_palladius_eu {
-  # Machines I have at work
   include sauce
   hamachi::network{'puppet-dundrum': pass => 'CH4NG3M3!' }
   sauce::parsley { 'cluster-version': 
     content => "for $domain: cluster_ver=$cluster_ver (defined )" 
   }
-  vcsrepo { '/root/git-puppet-sakura':
+  # post install add inkject to .bashrc :)
+  vcsrepo { '/root/git-autopuppet-sakura':
     ensure   => present,
     provider => git,
     source   => 'git://github.com/palladius/sakura.git'
+  }
+  vcsrepo { '/root/git-autopuppet-rump':
+    ensure   => present,
+    provider => git,
+    source   => 'git://github.com/palladius/puppet-rump.git'
   }
 }
 
@@ -39,11 +45,6 @@ node 'naucrate' inherits development_node {
   include hamachi
   include dropbox
   include vnc4server
-  vcsrepo { '/tmp/vcstest-git-clone':
-    ensure   => present,
-    provider => git,
-    source   => 'git://github.com/palladius/sakura.git'
-  }
   #TODO include nagios::nrpe
 }
 
