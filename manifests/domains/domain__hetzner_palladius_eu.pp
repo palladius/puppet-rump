@@ -7,6 +7,8 @@ class domain__hetzner_palladius_eu {
   # Machines I have in Hetzner
   include sauce
   include hamachi
+  hamachi::network{'puppet-hetzner': pass => 'CH4NG3ME!' }
+
 }
 
 
