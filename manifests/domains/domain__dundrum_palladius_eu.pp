@@ -10,6 +10,7 @@ $cluster_description = '
 $network_cidr        = '192.168.1/24'
 $expected_gw         = '192.168.1.1'
 $nagios_servers      = ['192.168.1.252','192.168.1.250'] # blackrock, naucrate
+$admin_mail          = 'riccardo.carlesso@gmail.com'
 
 # Common stuff to
 # Machines I have at home
@@ -52,6 +53,11 @@ node 'naucrate' inherits development_node {
   include dropbox
   include vnc4server
   #TODO include nagios::nrpe
+  # Trying this out!
+  mediawiki::new { 'naucratest':
+    ensure => present,
+    admin  => $admin_mail,
+  }
 }
 
 node 'hansel' inherits development_mac_node {
