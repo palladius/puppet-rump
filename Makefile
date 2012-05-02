@@ -1,6 +1,8 @@
 
 MAKE = /usr/bin/make
 
+help:
+	@echo Help: compile clean pull push.
 
 # Then make the submodule as well!
 compile:
