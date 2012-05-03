@@ -16,7 +16,9 @@ clean:
 
 pull:
 	git pull origin master
+	git submodule update
 	git submodule foreach git pull origin master
+	cd externals/ricpuppet && git pull
 
 push:
 	git push origin master
