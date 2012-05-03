@@ -21,4 +21,6 @@ pull:
 	cd externals/ricpuppet && git pull
 
 push:
+	@echo this only makes sense for Riccardo
+	#cd externals/ricpuppet && git push origin master
 	git push origin master
