@@ -17,6 +17,15 @@ INSTALL
     cd puppet-rump
     #rump freeze                                               # if you want a puppet-code-less client
 
+Than you can run it.
+
+Run
+---
+
+To run this is pretty complicated. Try this:
+
+	rump go
+
 
 Caveats
 -------
@@ -34,6 +43,8 @@ you have to do this (crazy innit?!?):
 
     git submodule init
     git submodule update
+
+So far sumbodules are not correctly loaded (sorry!). You can achieve this by going to the big external module and do 'git pull'.
 
 Download and execute cycle
 --------------------------

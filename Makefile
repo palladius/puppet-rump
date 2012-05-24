@@ -2,13 +2,17 @@
 MAKE = /usr/bin/make
 
 help:
-	@echo Help: compile clean pull push.
+	@echo Help: compile clean install pull push.
 
 # Then make the submodule as well!
 compile:
 	git submodule init && git submodule update
 	@echo Recursively make dir: external/
 	$(MAKE) --directory=externals/
+
+install:
+	sudo apt-get install -y rubygems git
+	sudo gem install rump puppet
 
 clean:
 	@echo 'rump: TODO cleanup (maybe destroy dir and git pull from scratch)'
