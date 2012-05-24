@@ -39,7 +39,6 @@ class domain__argenta_palladius_eu {
 
 node 'masagno' inherits development_node {
   $description_masagno = 'My ex super red-black masagno from Bolognas bought in Lugo now aperto e volante. La mamma lo vuole spento'
-  hamachi::network{'puppet-dundrum': pass => 'CH4NG3M3!' }
   include sauce
   include hamachi
   include dropbox
