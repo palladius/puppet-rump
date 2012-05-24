@@ -2,15 +2,15 @@
 # Machine on domain: argenta.palladius.eu (my house in Dundrum, Dublin 14)
 #############################################################################
 
-$cluster_description = '
+$cluster_description_argenta = '
 	This is my cluster in Dundrum, Dublin 14. All machines have a router by NTL.
 	Domain: argenta.palladius.eu
 	IPs: 192.168.1/24
 '
-$network_cidr        = '192.168.1/24'
-$expected_gw         = '192.168.1.1'
-$nagios_servers      = ['192.168.1.249'] # masagno
-$admin_mail          = 'riccardo.carlesso@gmail.com'
+$network_cidr_argenta        = '192.168.1/24'
+$expected_gw_argenta         = '192.168.1.1'
+$nagios_servers_argenta      = ['192.168.1.249'] # masagno
+$admin_mail_argenta          = 'riccardo.carlesso@gmail.com'
 
 # Common stuff to
 # Machines I have at home
@@ -39,7 +39,6 @@ class domain__argenta_palladius_eu {
 
 node 'masagno' inherits development_node {
   $description_masagno = 'My ex super red-black masagno from Bolognas bought in Lugo now aperto e volante. La mamma lo vuole spento'
-  #class {'sauce': machine_description => $description2 }
   hamachi::network{'puppet-dundrum': pass => 'CH4NG3M3!' }
   include sauce
   include hamachi

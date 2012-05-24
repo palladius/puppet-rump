@@ -2,7 +2,8 @@
 # Machine on domain: dundrum.palladius.eu (my house in Dundrum, Dublin 14)
 #############################################################################
 
-$cluster_description = '
+# TODO auto load with magic I did last month..
+$cluster_description_dundrum = '
 	This is my cluster in Dundrum, Dublin 14. All machines have a router by NTL.
 	Domain: dundrum.palladius.eu
 	IPs: 192.168.1/24
