@@ -4,10 +4,6 @@
 [submodule "externals/jamtur1_puppet-irc"]
 	path = externals/jamtur1_puppet-irc
 	url = https://github.com/jamtur01/puppet-irc.git
-[submodule "externals/puppet-vcsrepo"]
-	path = externals/puppet-vcsrepo
-	url = git://github.com/puppetlabs/puppet-vcsrepo
-
 [submodule "externals/puppetlabs-vcsrepo"]
 	path = externals/puppetlabs-vcsrepo
 	url = https://github.com/puppetlabs/puppetlabs-vcsrepo.git
