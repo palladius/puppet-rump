@@ -8,3 +8,6 @@
 	path = externals/puppet-vcsrepo
 	url = git://github.com/puppetlabs/puppet-vcsrepo
 
+[submodule "externals/puppetlabs-vcsrepo"]
+	path = externals/puppetlabs-vcsrepo
+	url = https://github.com/puppetlabs/puppetlabs-vcsrepo.git
