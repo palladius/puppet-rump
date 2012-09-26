@@ -1,0 +1,20 @@
+##################################
+# This was created automagically for host '{{fqdn}}'
+# On date: TODO
+# FQDN: {{fqdn}}
+#
+# Requirements: gem install liquid
+##################################
+
+$default_cluster_poweruser_name = '{{username|riccardo}}'
+
+#class {{underscored_domain}} {
+#  include sauce
+#}
+
+node '{{fqdn}}' inherits development_node {
+  $description = 'Created automagically via liquid templating engine v{{ver}} for {{fqdn}}'
+  class {'sauce':
+    poweruser_name => '{{username}}'
+  }
+}

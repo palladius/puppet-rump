@@ -2,3 +2,4 @@ var/**.yaml
 *~
 .DS_Store
 var
+*.sqp
