@@ -28,3 +28,6 @@ push:
 	@echo this only makes sense for Riccardo
 	#cd externals/ricpuppet && git push origin master
 	git push origin master
+
+check:
+	@echo 'Check that all files are checked out, symlinks are not broken, ...'
