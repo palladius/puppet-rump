@@ -2,8 +2,9 @@
 # This was created automagically for host '{{fqdn}}'
 # Template ver: 0.0.1
 # On date: TODO
-# FQDN: {{fqdn}}
-# User: {{username}}
+# FQDN:  {{fqdn}}
+# User:  {{username}}
+# Email: {{email}}
 #
 # Requirements: gem install liquid
 ####################################################################
@@ -16,7 +17,9 @@ $default_cluster_poweruser_name = '{{username}}'
 
 node '{{fqdn}}' inherits development_node {
   $description = 'Created automagically via liquid templating engine v{{ver}} for {{fqdn}}'
+	# TODO include in sauce the email:
   class {'sauce':
+	  # poweruser_mail => '{{email}}',
     poweruser_name => '{{username}}'
   }
 }
