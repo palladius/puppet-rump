@@ -12,7 +12,8 @@ compile:
 
 install:
 	sudo apt-get install -y rubygems git
-	sudo gem install rump puppet
+	sudo gem install rump puppet liquid
+	bin/create-auto-manifest-for-host.rb
 
 clean:
 	@echo 'rump: TODO cleanup (maybe destroy dir and git pull from scratch)'

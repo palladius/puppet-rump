@@ -11,8 +11,8 @@ up a bit (for the moment its just for my use).
 INSTALL
 -------
 
-    sudo apt-get install rubygems git                          # or whichever suits you to have GEMS available
-    sudo gem install rump puppet                               # dont use debian puppet, might be obsolete!
+    sudo apt-get install rubygems git libopenssl-ruby          # or whichever suits you to have GEMS available
+    sudo gem install rump puppet liquid                        # dont use debian puppet, might be obsolete!
     rump clone git://github.com/palladius/puppet-rump          # Get the repo (and sub-repo)
     cd puppet-rump
     #rump freeze                                               # if you want a puppet-code-less client
@@ -22,7 +22,7 @@ Than you can run it.
 Run
 ---
 
-To run this is pretty complicated. Try this:
+Try this:
 
 	rump go
 
@@ -34,10 +34,6 @@ Caveats
 you have to do this (crazy innit?!?):
 
     export PATH=$PATH:/var/lib/gems/1.8/bin/
-
-''openssl''. On some machines I had to aptget install also `libopenssl-ruby1.8`, otherwise rump wouldnt work (!!)
-
-    apt-get install libopenssl-ruby
 
 ''submodule''. First time I run it sometimes I nede this:
 
