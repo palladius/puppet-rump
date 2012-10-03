@@ -14,7 +14,7 @@ hostname = Socket.gethostname
 puts "Usage: #{$0} [<USERNAME>] [<EMAIL>]"
 
 #template_file = ENV['SVNHOME'] + '/templates/liquid/eclipse.project.liquid'
-out_file = template_file.gsub('DOMAIN', hostname).gsub('.liquid$','')
+out_file = template_file.gsub('DOMAIN', hostname).gsub('.liquid','')
 
 print "$0: Trying to create from template this file: #{out_file}\n"
 
