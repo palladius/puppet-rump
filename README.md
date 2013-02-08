@@ -19,6 +19,8 @@ INSTALL
 
 Than you can run it.
 
+On *CentOS*, try this: `sbin/centos-install.sh`
+
 Run
 ---
 
