@@ -21,6 +21,12 @@ Than you can run it.
 
 On *CentOS*, try this: `sbin/centos-install.sh`
 
+	curl https://raw.github.com/palladius/puppet-rump/master/sbin/centos-install.sh | sh -x
+
+On *Debian/Ubuntu_, try this: `sbin/debian-install.sh`
+
+	curl https://raw.github.com/palladius/puppet-rump/master/sbin/debian-install.sh | sh -x
+
 Run
 ---
 
