@@ -27,6 +27,11 @@ On *Debian/Ubuntu_, try this: `sbin/debian-install.sh`
 
 	curl https://raw.github.com/palladius/puppet-rump/master/sbin/debian-install.sh | sh -x
 
+Bugs
+----
+
+It currently *doesnt* work with puppet 3! :-(
+
 Run
 ---
 
