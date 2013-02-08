@@ -12,7 +12,7 @@ INSTALL
 -------
 
     sudo apt-get install rubygems git libopenssl-ruby          # or whichever suits you to have GEMS available
-    sudo gem install rump puppet liquid                        # dont use debian puppet, might be obsolete!
+    sudo gem install rump liquid                        # dont use debian puppet, might be obsolete!
     sudo gem install puppet --version 2.7.20                   # doesnt work with Puppet 3 (yet)
     rump clone git://github.com/palladius/puppet-rump          # Get the repo (and sub-repo)
     cd puppet-rump
