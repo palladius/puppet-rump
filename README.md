@@ -13,19 +13,17 @@ INSTALL
 
     sudo apt-get install rubygems git libopenssl-ruby          # or whichever suits you to have GEMS available
     sudo gem install rump puppet liquid                        # dont use debian puppet, might be obsolete!
+    sudo gem install puppet --version 2.7.20                   # doesnt work with Puppet 3 (yet)
     rump clone git://github.com/palladius/puppet-rump          # Get the repo (and sub-repo)
     cd puppet-rump
     #rump freeze                                               # if you want a puppet-code-less client
 
 Than you can run it.
 
-On *CentOS*, try this: `sbin/centos-install.sh`
+Or, if you are lazy like me, try:
 
-	curl https://raw.github.com/palladius/puppet-rump/master/sbin/centos-install.sh | sh -x
-
-On *Debian/Ubuntu_, try this: `sbin/debian-install.sh`
-
-	curl https://raw.github.com/palladius/puppet-rump/master/sbin/debian-install.sh | sh -x
+	curl https://raw.github.com/palladius/puppet-rump/master/sbin/centos-install.sh | sh -x  # on CentOS/Fedora/RedHat
+	curl https://raw.github.com/palladius/puppet-rump/master/sbin/debian-install.sh | sh -x  # on Debian/Ubuntu
 
 Bugs
 ----
