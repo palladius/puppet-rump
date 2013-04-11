@@ -22,13 +22,13 @@ Than you can run it.
 
 Or, if you are lazy like me, try:
 
-	curl https://raw.github.com/palladius/puppet-rump/master/sbin/centos-install.sh | sh -x  # on CentOS/Fedora/RedHat
-	curl https://raw.github.com/palladius/puppet-rump/master/sbin/debian-install.sh | sh -x  # on Debian/Ubuntu
+	curl https://raw.github.com/palladius/puppet-rump/master/sbin/centos-install.sh | sudo sh -x  # on CentOS/Fedora/RedHat
+	curl https://raw.github.com/palladius/puppet-rump/master/sbin/debian-install.sh | sudo sh -x  # on Debian/Ubuntu
 
 Bugs
 ----
 
-It currently *doesnt* work with puppet 3! :-(
+It currently *doesn't* work with puppet 3! :-(
 
 Run
 ---
